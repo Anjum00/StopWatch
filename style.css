@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 body {
     background: #edeaff;
     font-family: "Courier Prime", monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .stopWatch {
@@ -13,14 +18,15 @@ body {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 20px;
     color: #fff;
-    margin: 200px auto 0;
+    margin: 100px auto;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .stopWatch h1 {
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 64px;
     font-weight: lighter;
 }
@@ -29,20 +35,75 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-.buttons img{
+.buttons img {
     width: 100%;
     max-width: 50px;
-    margin: 0 20px;
+    margin: 0 15px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.buttons img:nth-child(2){
+.buttons img:hover {
+    transform: scale(1.1);
+}
+
+.buttons img:nth-child(2) {
     max-width: 80px;
 }
 
-.stopWatch :nth-child(1){
+.stopWatch :nth-child(1) {
     font-size: 40px;
     margin-top: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .stopWatch {
+        padding: 30px 15px;
+        margin: 50px auto;
+    }
+
+    .stopWatch h1 {
+        font-size: 48px;
+    }
+
+    .buttons img {
+        max-width: 40px;
+        margin: 0 10px;
+    }
+
+    .buttons img:nth-child(2) {
+        max-width: 60px;
+    }
+
+    .stopWatch :nth-child(1) {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stopWatch {
+        padding: 20px 10px;
+        margin: 30px auto;
+    }
+
+    .stopWatch h1 {
+        font-size: 36px;
+    }
+
+    .buttons img {
+        max-width: 30px;
+        margin: 0 8px;
+    }
+
+    .buttons img:nth-child(2) {
+        max-width: 50px;
+    }
+
+    .stopWatch :nth-child(1) {
+        font-size: 24px;
+    }
 }
